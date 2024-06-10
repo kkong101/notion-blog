@@ -55,11 +55,6 @@ export default siteConfig({
       title: '소개',
       pageId: '3e410b6c7b174adfb74d384681fbe13b',
     },
-    {
-      title: '소개',
-      pageId: '3e410b6c7b174adfb74d384681fbe13b',
-      menuPage: true,
-    },
   ],
 
   // -------- custom configs (2skydev) -------------
