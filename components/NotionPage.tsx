@@ -31,6 +31,7 @@ import { Page404 } from './Page404';
 import { PageAside } from './PageAside';
 import { PageHead } from './PageHead';
 import styles from './styles.module.css';
+import { Footer } from './Footer';
 
 // -----------------------------------------------------------------------------
 // dynamic imports for optional components
@@ -192,7 +193,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
     [block, recordMap, isBlogPost],
   );
 
-  // const footer = React.useMemo(() => <Footer />, []);
+  const footer = React.useMemo(() => <Footer />, []);
 
   if (router.isFallback) {
     return null;
@@ -260,7 +261,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
         searchNotion={config.isSearchEnabled ? searchNotion : null}
         pageAside={pageAside}
         pageFooter={config.enableComment ? !isBlogPost ? null : <Comments /> : null}
-        footer={null}
+        footer={footer}
       />
     </>
   );

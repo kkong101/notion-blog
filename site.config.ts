@@ -11,7 +11,7 @@ export default siteConfig({
   // basic site info (required)
   name: 'ToolKit Blog',
   domain: 'blog.2skydev.com',
-  author: 'Jeonghyeon',
+  author: 'JeongHyeon',
 
   // open graph metadata (optional)
   description: 'Jeonghyeon - developer blog',
@@ -19,14 +19,14 @@ export default siteConfig({
   // social usernames (optional)
   // twitter: 'transitive_bs',
   github: 'jeonghyeon00',
-  // linkedin: 'fisch2',
+  linkedin: '정현-송-4ba89323a',
   // newsletter: '#', // optional newsletter URL
   // youtube: '#', // optional youtube channel name or `channel/UCGbXXXXXXXXXXXXXXXXXXXXXX`
 
   // default notion icon and cover images for site-wide consistency (optional)
   // page-specific values will override these site-wide defaults
   defaultPageIcon:
-    'https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F0d2daa37-61d0-45b6-b333-9a2bd0bdc3ee%2Fprofile_%25E1%2584%2580%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AA%25E1%2584%258C%25E1%2585%25B5%25E1%2586%25AF_circle.png?table=block&id=d1e89e9e-42eb-4ebf-9486-ae0374039efc&spaceId=2eb5336b-2edb-42d0-bc6c-95d72d4d1b74&width=250&userId=bef10e95-202b-4b6b-9626-7af866b6f9ba&cache=v2',
+    'https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F19c8b54c-8c81-40c4-bd7c-286215164336%2F00a7b24b-4f0d-412f-aa3b-a9850d6dae75%2Fhamb.jpg?table=block&id=e8f14162-133b-489a-b32f-9ad88e1cdb1f&spaceId=19c8b54c-8c81-40c4-bd7c-286215164336&width=250&userId=e110f1de-dc0c-4f68-9f1c-a301b833e8dc&cache=v2',
   defaultPageCover: null,
   defaultPageCoverPosition: 0.5,
 
@@ -52,15 +52,15 @@ export default siteConfig({
   // important pages
   navigationStyle: 'custom',
   navigationLinks: [
-    {
-      title: '카테고리',
-      pageId: '36400db511474331b5c1de6918212469',
-    },
-    {
-      title: '카테고리',
-      pageId: '36400db511474331b5c1de6918212469',
-      menuPage: true,
-    },
+    // {
+    //   title: '카테고리',
+    //   pageId: '36400db511474331b5c1de6918212469',
+    // },
+    // {
+    //   title: '카테고리',
+    //   pageId: '36400db511474331b5c1de6918212469',
+    //   menuPage: true,
+    // },
   ],
 
   // -------- custom configs (2skydev) -------------
