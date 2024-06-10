@@ -259,13 +259,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
         mapImageUrl={mapImageUrl}
         searchNotion={config.isSearchEnabled ? searchNotion : null}
         pageAside={pageAside}
-        pageFooter={
-          config.enableComment ? (
-            !isBlogPost ? null : (
-              <Comments pageId={pageId} recordMap={recordMap} />
-            )
-          ) : null
-        }
+        pageFooter={config.enableComment ? !isBlogPost ? null : <Comments /> : null}
         footer={null}
       />
     </>
