@@ -102,7 +102,7 @@ const Tweet = ({ id }: { id: string }) => {
 
 const propertyLastEditedTimeValue = ({ block, pageHeader }, defaultFn: () => React.ReactNode) => {
   if (pageHeader && block?.last_edited_time) {
-    return `Last updated ${formatDate(block?.last_edited_time, {
+    return `마지막 수정 ${formatDate(block?.last_edited_time, {
       month: 'long',
     })}`;
   }
