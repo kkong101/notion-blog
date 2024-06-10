@@ -42,25 +42,24 @@ export default siteConfig({
   // any pages defined here will override their default URL paths
   // example:
   //
-  // pageUrlOverrides: {
-  //   '/foo': '067dd719a912471ea9a3ac10710e7fdf',
-  //   '/bar': '0be6efce9daf42688f65c76b89f8eb27'
-  // }
-  pageUrlOverrides: null,
+  pageUrlOverrides: {
+    '/introduction': '3e410b6c7b174adfb74d384681fbe13b',
+  },
+  // pageUrlOverrides: null,
 
   // whether to use the default notion navigation style or a custom one with links to
   // important pages
   navigationStyle: 'custom',
   navigationLinks: [
-    // {
-    //   title: '카테고리',
-    //   pageId: '36400db511474331b5c1de6918212469',
-    // },
-    // {
-    //   title: '카테고리',
-    //   pageId: '36400db511474331b5c1de6918212469',
-    //   menuPage: true,
-    // },
+    {
+      title: '소개',
+      pageId: '3e410b6c7b174adfb74d384681fbe13b',
+    },
+    {
+      title: '소개',
+      pageId: '3e410b6c7b174adfb74d384681fbe13b',
+      menuPage: true,
+    },
   ],
 
   // -------- custom configs (2skydev) -------------
