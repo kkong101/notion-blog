@@ -5,10 +5,10 @@ const Giscus = () => {
   useEffect(() => {
     const script = document.createElement('script');
     script.src = 'https://giscus.app/client.js';
-    script.setAttribute('data-repo', 'jeonghyeon00/nextjs-notion-starter-kit');
-    script.setAttribute('data-repo-id', 'R_kgDOMHMZHQ');
+    script.setAttribute('data-repo', 'jeonghyeon00/notion-blog');
+    script.setAttribute('data-repo-id', 'R_kgDOMHNymA');
     script.setAttribute('data-category', 'Comments');
-    script.setAttribute('data-category-id', 'DIC_kwDOMHMZHc4Cf-kq');
+    script.setAttribute('data-category-id', 'DIC_kwDOMHNymM4Cf-mA');
     script.setAttribute('data-mapping', 'pathname');
     script.setAttribute('data-strict', '0');
     script.setAttribute('data-reactions-enabled', '1');
