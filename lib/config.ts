@@ -72,7 +72,7 @@ export const navigationStyle: NavigationStyle = getSiteConfig('navigationStyle',
 export const navigationLinks: Array<NavigationLink | null> = getSiteConfig('navigationLinks', null);
 
 // Optional site search
-export const isSearchEnabled: boolean = getSiteConfig('isSearchEnabled', true);
+export const isSearchEnabled: boolean = getSiteConfig('isSearchEnabled', false);
 
 // ----------------------------------------------------------------------------
 
