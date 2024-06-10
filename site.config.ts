@@ -78,4 +78,6 @@ export default siteConfig({
 
   // enable comment
   enableComment: true,
+
+  isSearchEnabled: true,
 });
