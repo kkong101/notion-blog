@@ -12,6 +12,7 @@ import { useDarkMode } from 'lib/use-dark-mode';
 import * as config from 'lib/config';
 
 import styles from './styles.module.css';
+import HitCount from './HitCounter';
 
 // TODO: merge the data and icons from PageSocial with the social links in Footer
 
@@ -38,6 +39,7 @@ export const FooterImpl: React.FC = () => {
       <div className={styles.copyright}>
         Copyright {year} @ {config.author}
       </div>
+      <HitCount />
 
       <div className={styles.settings}>
         {hasMounted && (
