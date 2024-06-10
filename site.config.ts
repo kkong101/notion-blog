@@ -10,7 +10,7 @@ export default siteConfig({
 
   // basic site info (required)
   name: 'ToolKit Blog',
-  domain: 'blog.2skydev.com',
+  domain: 'notion-blog-sand-tau.vercel.app',
   author: 'JeongHyeon',
 
   // open graph metadata (optional)
