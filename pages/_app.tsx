@@ -5,6 +5,7 @@ import type { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
 import { GoogleAnalytics } from 'nextjs-google-analytics';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import axios from 'axios';
 import { motion } from 'framer-motion';
@@ -80,6 +81,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
         <GoogleAnalytics trackPageViews />
         <PageLoading />
         <Analytics />
+        <SpeedInsights />
         <motion.div
           key={router.pathname + router.query?.pageId || ''}
           initial={{ x: 10, opacity: 0 }}
