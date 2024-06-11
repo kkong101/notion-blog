@@ -74,7 +74,7 @@ export default siteConfig({
   contentPositionTextAlign: 'left',
 
   // default theme color
-  defaultTheme: 'system',
+  defaultTheme: 'light',
 
   // enable comment
   enableComment: true,
