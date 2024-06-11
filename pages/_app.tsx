@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import type { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
 import { GoogleAnalytics } from 'nextjs-google-analytics';
+import { Analytics } from '@vercel/analytics/react';
 
 import axios from 'axios';
 import { motion } from 'framer-motion';
@@ -78,7 +79,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
         <Bootstrap />
         <GoogleAnalytics trackPageViews />
         <PageLoading />
-
+        <Analytics />
         <motion.div
           key={router.pathname + router.query?.pageId || ''}
           initial={{ x: 10, opacity: 0 }}
