@@ -26,7 +26,7 @@ const Giscus = () => {
     return () => {
       document.body.removeChild(script);
     };
-  }, [darkMode]);
+  }, []);
 
   return <div className="giscus"></div>;
 };
