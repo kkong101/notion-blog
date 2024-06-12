@@ -700,3 +700,24 @@ body {
     }
   }
 }
+
+// dropdown dark mode
+
+.notion-collection-view-dropdown-content-item {
+  background-color: var(--bg-color);
+  color: var(--fg-color);
+  fill: var(--fg-color);
+
+  &:hover {
+    background-color: var(--bg-color-1);
+  }
+}
+.notion-collection-view-type {
+  .notion-collection-view-dropdown-icon {
+    fill: var(--fg-color);
+  }
+
+  .notion-collection-view-type-icon {
+    fill: var(--fg-color);
+  }
+}
