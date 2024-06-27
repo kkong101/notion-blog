@@ -3,7 +3,8 @@ import React from 'react';
 
 const Giscus = () => {
   useEffect(() => {
-    const darkMode = JSON.parse(localStorage.getItem('preferences')).isDarkMode;
+    const preferences = JSON.parse(localStorage.getItem('preferences'));
+    const darkMode = preferences?.isDarkMode === true ? true : false;
     const theme = darkMode ? 'dark_dimmed' : 'light_high_contrast';
     const script = document.createElement('script');
     script.src = 'https://giscus.app/client.js';
