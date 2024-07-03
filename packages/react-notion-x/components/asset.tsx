@@ -11,6 +11,7 @@ import { LiteYouTubeEmbed } from './lite-youtube-embed';
 const isServer = typeof window === 'undefined';
 
 const supportedAssetTypes = [
+  'replit',
   'video',
   'image',
   'embed',
@@ -47,7 +48,7 @@ export const Asset: React.FC<{
   };
 
   const assetStyle: React.CSSProperties = {};
-  // console.log('asset', block);
+  // console.log('asset', block)
 
   if (block.format) {
     const {
@@ -57,18 +58,7 @@ export const Asset: React.FC<{
       block_full_width,
       block_page_width,
       block_preserve_scale,
-      // CUSTOM: 에셋 정렬 기능 추가
-      block_alignment,
     } = block.format;
-
-    // CUSTOM: 에셋 정렬 기능 추가
-    if (block_alignment) {
-      style.alignSelf = {
-        left: 'flex-start',
-        center: 'center',
-        right: 'flex-end',
-      }[block_alignment];
-    }
 
     if (block_full_width || block_page_width) {
       if (block_full_width) {
@@ -99,6 +89,21 @@ export const Asset: React.FC<{
         }
       }
     } else {
+      switch (block.format?.block_alignment) {
+        case 'center': {
+          style.alignSelf = 'center';
+          break;
+        }
+        case 'left': {
+          style.alignSelf = 'start';
+          break;
+        }
+        case 'right': {
+          style.alignSelf = 'end';
+          break;
+        }
+      }
+
       if (block_width) {
         style.width = block_width;
       }
@@ -120,7 +125,7 @@ export const Asset: React.FC<{
     }
   }
 
-  const source = recordMap.signed_urls?.[block.id] || block.properties?.source?.[0]?.[0];
+  let source = recordMap.signed_urls?.[block.id] || block.properties?.source?.[0]?.[0];
   let content = null;
 
   if (!source) {
@@ -150,6 +155,7 @@ export const Asset: React.FC<{
   } else if (block.type === 'pdf') {
     style.overflow = 'auto';
     style.background = 'rgb(226, 226, 226)';
+    style.display = 'block';
 
     if (!style.padding) {
       style.padding = '8px 16px';
@@ -168,7 +174,8 @@ export const Asset: React.FC<{
     block.type === 'maps' ||
     block.type === 'excalidraw' ||
     block.type === 'codepen' ||
-    block.type === 'drive'
+    block.type === 'drive' ||
+    block.type === 'replit'
   ) {
     if (
       block.type === 'video' &&
@@ -232,6 +239,8 @@ export const Asset: React.FC<{
             />
           );
         } else {
+          src += block.type === 'typeform' ? '&disable-auto-focus=true' : '';
+
           content = (
             <iframe
               className="notion-asset-object-fit"
@@ -252,7 +261,10 @@ export const Asset: React.FC<{
     }
   } else if (block.type === 'image') {
     // console.log('image', block)
-
+    //kind of a hack for now. New file.notion.so images aren't signed correctly
+    if (source.includes('file.notion.so')) {
+      source = block.properties?.source?.[0]?.[0];
+    }
     const src = mapImageUrl(source, block as Block);
     const caption = getTextContent(block.properties?.caption);
     const alt = caption || 'notion image';
