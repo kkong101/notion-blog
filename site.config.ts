@@ -10,7 +10,7 @@ export default siteConfig({
 
   // basic site info (required)
   name: 'ToolKit Blog',
-  domain: 'https://blog.breakti.me',
+  domain: 'blog.breakti.me',
   author: 'JeongHyeon',
 
   // open graph metadata (optional)
