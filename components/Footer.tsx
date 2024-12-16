@@ -13,6 +13,7 @@ import * as config from 'lib/config';
 
 import styles from './styles.module.css';
 import HitCount from './HitCount';
+import KakaoAdFit from './KakaoAdFit';
 
 // TODO: merge the data and icons from PageSocial with the social links in Footer
 
@@ -36,6 +37,7 @@ export const FooterImpl: React.FC = () => {
 
   return (
     <footer className={styles.footer}>
+      <KakaoAdFit />
       <div className={styles.copyright}>
         Copyright {year} @ {config.author}
       </div>
@@ -128,7 +130,7 @@ export const FooterImpl: React.FC = () => {
           </a>
         )}
       </div>
-    </footer>
+    </footer >
   );
 };
 
