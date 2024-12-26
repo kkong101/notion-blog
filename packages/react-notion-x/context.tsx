@@ -143,7 +143,7 @@ const defaultNotionContext: NotionContext = {
   searchNotion: null,
 
   fullPage: false,
-  darkMode: false,
+  darkMode: true,
   previewImages: false,
   forceCustomImages: false,
   showCollectionViewDropdown: true,

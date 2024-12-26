@@ -2,16 +2,16 @@ import { siteConfig } from './lib/site-config';
 
 export default siteConfig({
   // the site's root Notion page (required)
-  rootNotionPageId: 'e8f14162133b489ab32f9ad88e1cdb1f',
+  rootNotionPageId: '2ba4058001e04d5d94613357976396b2',
 
   // if you want to restrict pages to a single notion workspace (optional)
   // (this should be a Notion ID; see the docs for how to extract this)
   rootNotionSpaceId: null,
 
   // basic site info (required)
-  name: 'ToolKit Blog',
+  name: 'Kkong101 Blog',
   domain: 'blog.breakti.me',
-  author: 'JeongHyeon',
+  author: 'Kkong101',
 
   // open graph metadata (optional)
   description: 'Jeonghyeon - developer blog',
@@ -25,8 +25,7 @@ export default siteConfig({
 
   // default notion icon and cover images for site-wide consistency (optional)
   // page-specific values will override these site-wide defaults
-  defaultPageIcon:
-    'https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F19c8b54c-8c81-40c4-bd7c-286215164336%2F00a7b24b-4f0d-412f-aa3b-a9850d6dae75%2Fhamb.jpg?table=block&id=e8f14162-133b-489a-b32f-9ad88e1cdb1f&spaceId=19c8b54c-8c81-40c4-bd7c-286215164336&width=250&userId=e110f1de-dc0c-4f68-9f1c-a301b833e8dc&cache=v2',
+  defaultPageIcon: null,
   defaultPageCover: null,
   defaultPageCoverPosition: 0.5,
 
@@ -51,15 +50,10 @@ export default siteConfig({
   // important pages
   navigationStyle: 'custom',
   navigationLinks: [
-    // {
-    //   title: '소개',
-    //   pageId: '3e410b6c7b174adfb74d384681fbe13b',
-    // },
-    // {
-    //   title: '소개',
-    //   pageId: '3e410b6c7b174adfb74d384681fbe13b',
-    //   menuPage: true,
-    // },
+    {
+      title: 'About me',
+      pageId: '16852592c7ed8023bdcfcdbff9229399',
+    }
   ],
 
   // -------- custom configs (2skydev) -------------
@@ -74,7 +68,7 @@ export default siteConfig({
   contentPositionTextAlign: 'left',
 
   // default theme color
-  defaultTheme: 'light',
+  defaultTheme: 'dark',
 
   // enable comment
   enableComment: true,

@@ -37,7 +37,7 @@ export const FooterImpl: React.FC = () => {
 
   return (
     <footer className={styles.footer}>
-      <KakaoAdFit />
+      {/*<KakaoAdFit />*/}
       <div className={styles.copyright}>
         Copyright {year} @ {config.author}
       </div>
