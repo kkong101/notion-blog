@@ -10,16 +10,16 @@ export default siteConfig({
 
   // basic site info (required)
   name: 'Kkong101 Blog',
-  domain: 'blog.breakti.me',
+  domain: 'blog.kkong101.com',
   author: 'Kkong101',
 
   // open graph metadata (optional)
-  description: 'Jeonghyeon - developer blog',
+  description: 'Kkong101 - developer blog',
 
   // social usernames (optional)
   // twitter: 'transitive_bs',
-  github: 'jeonghyeon00',
-  linkedin: '정현-송-4ba89323a',
+  github: 'kkong101',
+  linkedin: 'roy-kong-b7675b215',
   // newsletter: '#', // optional newsletter URL
   // youtube: '#', // optional youtube channel name or `channel/UCGbXXXXXXXXXXXXXXXXXXXXXX`
 

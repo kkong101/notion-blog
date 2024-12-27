@@ -5,10 +5,10 @@ FROM node:20-alpine
 WORKDIR /app
 
 # 3. 의존성 파일 복사
-COPY package.json yarn.lock ./
+COPY package.json ./
 
 # 4. 의존성 설치
-RUN yarn install --frozen-lockfile
+RUN yarn install
 
 # 5. 애플리케이션 소스 복사
 COPY . .
