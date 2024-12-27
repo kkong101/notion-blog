@@ -8,13 +8,12 @@ WORKDIR /app
 COPY package.json yarn.lock ./
 
 # 4. 의존성 설치
-RUN yarn install --production
+RUN yarn install --frozen-lockfile
 
 # 5. 애플리케이션 소스 복사
 COPY . .
 
 ENV NODE_ENV=production
-ENV ANALYZE=false
 
 # 6. Next.js 애플리케이션 빌드
 RUN yarn build
